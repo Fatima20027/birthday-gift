@@ -1,0 +1,171 @@
+:root{
+  --cake-color: #;
+  --icing-color: #;
+}
+
+body{
+  height: 100vh;
+  margin: 0;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.container{
+  text-align: center;
+}
+
+.plate{
+  width: 200px;
+  height: 5px;
+  background-color: antiquewhite;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+.cake{
+  position: relative;
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  top: -55px;
+
+
+  
+}
+
+.layer{
+  /*background-color: #fff;
+  position: absolute;
+  border-radius: 18px;
+  width: 100px;
+  height: 5px;
+  animation: dropCake 1s ease-out forwards;
+  transform: translateY(-200px);
+  backface-visibility: hidden;
+  left: 46%;*/
+
+  width: 100px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-200px);
+  animation-fill-mode: forwards;
+  position: relative;
+  background-color: aliceblue;
+  border-radius: 5px;
+  
+  
+}
+
+.layer3 {
+  height: 10px;
+  background: #8d5d3a;
+  animation: dropFirst 0.8s ease-out 0.2s forwards;
+  
+}
+
+@keyframes dropFirst {
+  0% { opacity: 0; transform: translateY(-200px) rotate(0deg); }
+  60% { opacity: 1; transform: translateY(10px) rotate(-5deg); }
+  80% { opacity: 1; transform: translateY(-5px) rotate(10deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(0deg); }
+}
+
+
+.cream2 {
+  height: 5px;
+  background: pink;
+  animation: dropNext 0.6s ease-out 0.8s forwards;
+}
+
+.layer2{
+  height: 10px;
+  background: #8d5d3a;
+  animation: dropFirst 0.8s ease-out 1.3s forwards;
+
+}
+
+.cream1{
+  height: 5px;
+  background: pink;
+  animation: dropNext 0.6s ease-out 1.6s forwards;
+
+}
+
+.layer1{
+  height: 10px;
+  background: #8d5d3a;
+  animation: dropFirst 0.8s ease-out 2s forwards;
+
+}
+
+.cream-balls .ball{
+  width: 12px;
+  height: 6px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top: 2px;
+  background-color: rgb(165, 42, 58);
+  transform: translateY(-200px);
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.cream-balls{
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  
+  
+  
+}
+
+.ball:nth-child(1){
+  animation: dropFirst 0.8s ease-out 3s forwards;
+
+}
+
+.ball:nth-child(2){
+  animation: dropFirst 0.8s ease-out 3.2s forwards;
+
+}
+
+.ball:nth-child(3){
+  animation: dropFirst 0.8s ease-out 3.6s forwards;
+
+}
+
+.ball:nth-child(4){
+  animation: dropFirst 0.8s ease-out 3.8s forwards;
+
+}
+
+
+
+@keyframes dropNext {
+  0% { opacity: 0; transform: translateY(-200px); }
+  80% { opacity: 1; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/*
+.cake::after,
+.cake::before{
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 5px;
+}
+
+.cake::after{
+  top: 25%;
+  left: 0;
+}
+
+.cake::before{
+  top: 45%;
+  left: 0;
+
+}*/
